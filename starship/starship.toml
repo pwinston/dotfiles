@@ -1,0 +1,48 @@
+# No extra blank line before prompt
+add_newline = false
+
+# Order of prompt segments
+format = "$directory$git_branch$git_status$python$pyenv$cmd_duration$character"
+
+# --- PATH ---
+[directory]
+style = "blue bold"
+truncation_length = 3
+truncate_to_repo = true
+format = "[$path]($style) "
+
+# --- GIT BRANCH ---
+[git_branch]
+symbol = " "
+style = "purple bold"
+format = "[$symbol$branch]($style) "
+
+# Optional: show dirty status
+[git_status]
+style = "red"
+format = "[$all_status$ahead_behind]($style) "
+
+# --- COMMAND DURATION ---
+[cmd_duration]
+min_time = 500      # ms before showing
+style = "yellow"
+format = "[$duration]($style) "
+
+# --- PROMPT CHARACTER ---
+[character]
+success_symbol = "➜ "
+error_symbol = "✗ "
+
+# Show Python interpreter version
+[python]
+symbol = "🐍 "
+style = "green bold"
+format = "[$symbol$version]($style) "
+disabled = false
+
+# Show pyenv active version / environment
+[pyenv]
+symbol = "ⓟ "
+style = "yellow bold"
+format = "via [${version}]($style) "
+disabled = false
