@@ -1,4 +1,20 @@
-# starship
+# Completion
+autoload -Uz compinit
+compinit
+
+# History
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt HIST_IGNORE_ALL_DUPS
+setopt SHARE_HISTORY
+
+# Aliases
+alias ll='ls -la'
+alias la='ls -A'
+alias gs='git status'
+
+# Starship
 if command -v starship >/dev/null 2>&1; then
   eval "$(starship init zsh)"
 fi
