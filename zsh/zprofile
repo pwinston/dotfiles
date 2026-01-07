@@ -1,0 +1,6 @@
+echo "dotfiles: zprofile loaded"
+
+# homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+
