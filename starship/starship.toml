@@ -39,10 +39,3 @@ symbol = "🐍 "
 style = "green bold"
 format = "[$symbol$version]($style) "
 disabled = false
-
-# Show pyenv active version / environment
-[pyenv]
-symbol = "ⓟ "
-style = "yellow bold"
-format = "via [${version}]($style) "
-disabled = false
