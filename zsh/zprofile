@@ -1,5 +1,7 @@
 # path
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+export PATH="/Applications/WezTerm.app/Contents/MacOS:$PATH"
+
 
 # locale
 export LANG=en_US.UTF-8
