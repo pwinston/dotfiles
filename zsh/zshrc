@@ -58,12 +58,26 @@ set_tab() {
 }
 
 # Functions (project helpers)
+_find_env() {
+  local dir="$PWD"
+  while [[ "$dir" != "/" ]]; do
+    if [[ -f "$dir/.env" ]]; then
+      echo "$dir/.env"
+      return
+    fi
+    dir="${dir:h}"
+  done
+  echo ".env"
+}
+
 app() {
-  local port=$(grep '^WEB_PORT=' .env | cut -d= -f2)
+  local envfile=$(_find_env)
+  local port=$(grep '^WEB_PORT=' "$envfile" | cut -d= -f2)
   open "http://localhost:$port"
 }
 
 admin() {
-  local port=$(grep '^BACKLOT_PORT=' .env | cut -d= -f2)
+  local envfile=$(_find_env)
+  local port=$(grep '^BACKLOT_PORT=' "$envfile" | cut -d= -f2)
   open "http://localhost:$port"
 }

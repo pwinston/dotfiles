@@ -25,6 +25,21 @@ local function orson_workspace(name, dir)
   tab:activate()
 end
 
+-- claude workspace: claude, shell1, shell2
+local function claude_workspace(name, dir)
+  local tab, pane, window = wezterm.mux.spawn_window {
+    workspace = name,
+    cwd = dir,
+  }
+  tab:set_title('claude')
+  pane:send_text('claude\n')
+
+  window:spawn_tab({ cwd = dir }):set_title('shell1')
+  window:spawn_tab({ cwd = dir }):set_title('shell2')
+
+  tab:activate()
+end
+
 -- simple workspace: repo, shell1, shell2
 local function simple_workspace(name, dir)
   local tab, pane, window = wezterm.mux.spawn_window {
@@ -56,7 +71,7 @@ wezterm.on('gui-startup', function()
   orson_workspace('orson8', home .. '/tobeva/orson8')
   orson_workspace('orson9', home .. '/tobeva/orson9')
 
-  simple_workspace('canopy', home .. '/tobeva/canopy')
+  claude_workspace('canopy', home .. '/tobeva/canopy')
   wezterm.mux.set_active_workspace('tobeva')
 end)
 
