@@ -1,7 +1,7 @@
 local wezterm = require 'wezterm'
 local act = wezterm.action
 
-local home = '/Users/pwinston'
+local home = wezterm.home_dir
 
 -- Hostname -> projects module mapping
 local machine_map = {
