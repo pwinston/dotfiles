@@ -3,14 +3,15 @@ local act = wezterm.action
 
 local home = wezterm.home_dir
 
--- Hostname -> projects module mapping
-local machine_map = {
-  ['pbw24.lan'] = 'projects-home',
-}
-
-local hostname = wezterm.hostname()
-local projects_module = machine_map[hostname] or 'projects-work'
-local projects = require(projects_module)(home)
+-- Read shared config from ~/.config/canopy/config.json
+local config_path = home .. '/.config/canopy/config.json'
+local f = io.open(config_path, 'r')
+local canopy = { projects = {}, default = nil }
+if f then
+  local ok, parsed = pcall(wezterm.json_parse, f:read('*a'))
+  f:close()
+  if ok then canopy = parsed end
+end
 
 -- create an orson-style workspace: claude, serve, backlot, shell1, shell2
 local function orson_workspace(name, dir)
@@ -74,11 +75,14 @@ wezterm.on('format-window-title', function(tab, pane, tabs, panes, config)
 end)
 
 wezterm.on('gui-startup', function()
-  for _, p in ipairs(projects.projects) do
+  for _, p in ipairs(canopy.projects or {}) do
     local creator = workspace_creators[p.type] or simple_workspace
-    creator(p.name, p.dir)
+    local dir = p.dir:gsub('^~', home)
+    creator(p.name, dir)
   end
-  wezterm.mux.set_active_workspace(projects.default)
+  if canopy.default then
+    wezterm.mux.set_active_workspace(canopy.default)
+  end
 end)
 
 -- Build keybindings from project list
@@ -87,7 +91,7 @@ local keys = {
   { key = 'Enter', mods = 'SHIFT', action = act.SendString '\n' },
 }
 
-for _, p in ipairs(projects.projects) do
+for _, p in ipairs(canopy.projects or {}) do
   if p.key then
     table.insert(keys, {
       key = p.key,

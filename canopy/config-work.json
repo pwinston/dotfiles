@@ -1,0 +1,10 @@
+{
+  "mainWorktree": "~/tobeva/canopy",
+  "default": "canopy",
+  "projects": [
+    { "type": "simple", "name": "canopy",     "dir": "~/tobeva/canopy",                  "key": "0" },
+    { "type": "simple", "name": "core",        "dir": "~/kobold/kobold-core",             "key": "1" },
+    { "type": "simple", "name": "prospector",  "dir": "~/kobold/machine-prospector",      "key": "2" },
+    { "type": "simple", "name": "terrashed",   "dir": "~/kobold/terrashed-ingest",        "key": "3" }
+  ]
+}
