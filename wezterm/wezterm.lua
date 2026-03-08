@@ -101,6 +101,23 @@ for _, p in ipairs(canopy.projects or {}) do
   end
 end
 
+-- File-based IPC: Canopy writes a workspace name here to trigger switching.
+local switch_file = '/tmp/canopy-switch-workspace'
+
+local function check_switch()
+  local f = io.open(switch_file, 'r')
+  if f then
+    local workspace = f:read('*l')
+    f:close()
+    os.remove(switch_file)
+    if workspace and workspace ~= '' then
+      wezterm.mux.set_active_workspace(workspace)
+    end
+  end
+  wezterm.time.call_after(0.3, check_switch)
+end
+wezterm.time.call_after(0.3, check_switch)
+
 return {
   font_size = 15,
   keys = keys,
