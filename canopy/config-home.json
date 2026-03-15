@@ -1,6 +1,6 @@
 {
-  "mainWorktree": "~/tobeva/canopy",
-  "default": "tobeva",
+  "mainWorkspace": "~/tobeva/canopy",
+  "terminal": "wezterm",
   "layouts": {
     "simple": {
       "tabs": [
@@ -26,16 +26,10 @@
     }
   },
   "workspaces": [
-    { "layout": "simple", "name": "tobeva",  "dir": "~/tobeva",         "key": "0" },
-    { "layout": "orson",  "name": "orson1",  "dir": "~/tobeva/orson",   "key": "1" },
-    { "layout": "orson",  "name": "orson2",  "dir": "~/tobeva/orson2",  "key": "2" },
-    { "layout": "orson",  "name": "orson3",  "dir": "~/tobeva/orson3",  "key": "3" },
-    { "layout": "orson",  "name": "orson4",  "dir": "~/tobeva/orson4",  "key": "4" },
-    { "layout": "orson",  "name": "orson5",  "dir": "~/tobeva/orson5",  "key": "5" },
-    { "layout": "orson",  "name": "orson6",  "dir": "~/tobeva/orson6",  "key": "6" },
-    { "layout": "orson",  "name": "orson7",  "dir": "~/tobeva/orson7",  "key": "7" },
-    { "layout": "orson",  "name": "orson8",  "dir": "~/tobeva/orson8",  "key": "8" },
-    { "layout": "orson",  "name": "orson9",  "dir": "~/tobeva/orson9",  "key": "9" },
-    { "layout": "claude", "name": "canopy",  "dir": "~/tobeva/canopy",  "key": "c" }
+    { "layout": "simple", "name": "tobeva",  "dir": "~/tobeva" },
+    { "layout": "orson",  "name": "orson",  "dir": "~/tobeva/orson" },
+    { "layout": "claude", "name": "canopy",  "dir": "~/tobeva/canopy" },
+    { "layout": "claude", "name": "interlink",  "dir": "~/tobeva/interlink" },
+    { "layout": "claude", "name": "dotfiles",  "dir": "~/dotfiles" }
   ]
 }
