@@ -2,9 +2,35 @@
   "mainWorktree": "~/tobeva/canopy",
   "default": "canopy",
   "projects": [
-    { "type": "simple", "name": "canopy",     "dir": "~/tobeva/canopy",                  "key": "0" },
-    { "type": "simple", "name": "core",        "dir": "~/kobold/kobold-core",             "key": "1" },
-    { "type": "simple", "name": "prospector",  "dir": "~/kobold/machine-prospector",      "key": "2" },
-    { "type": "simple", "name": "terrashed",   "dir": "~/kobold/terrashed-ingest",        "key": "3" }
+    {
+      "type": "claude",
+      "name": "canopy",
+      "dir": "~/tobeva/canopy",
+      "key": "0"
+    },
+    {
+      "type": "claude",
+      "name": "kobold-core",
+      "dir": "~/kobold/kobold-core",
+      "key": "1"
+    },
+    {
+      "type": "claude",
+      "name": "kobold-gis",
+      "dir": "~/kobold/kobold-gis",
+      "key": "2"
+    },
+    {
+      "type": "claude",
+      "name": "machine-prospector",
+      "dir": "~/kobold/machine-prospector",
+      "key": "3"
+    },
+    {
+      "type": "claude",
+      "name": "terrashed-ingest",
+      "dir": "~/kobold/terrashed-ingest",
+      "key": "4"
+    }
   ]
 }
