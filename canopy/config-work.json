@@ -1,36 +1,20 @@
 {
-  "mainWorktree": "~/tobeva/canopy",
-  "default": "canopy",
-  "projects": [
-    {
-      "type": "claude",
-      "name": "canopy",
-      "dir": "~/tobeva/canopy",
-      "key": "0"
-    },
-    {
-      "type": "claude",
-      "name": "kobold-core",
-      "dir": "~/kobold/kobold-core",
-      "key": "1"
-    },
-    {
-      "type": "claude",
-      "name": "kobold-gis",
-      "dir": "~/kobold/kobold-gis",
-      "key": "2"
-    },
-    {
-      "type": "claude",
-      "name": "machine-prospector",
-      "dir": "~/kobold/machine-prospector",
-      "key": "3"
-    },
-    {
-      "type": "claude",
-      "name": "terrashed-ingest",
-      "dir": "~/kobold/terrashed-ingest",
-      "key": "4"
+  "mainWorkspace": "~/tobeva/canopy",
+  "terminal": "wezterm",
+  "layouts": {
+    "claude": {
+      "tabs": [
+        { "title": "claude", "exec": "claude" },
+        { "title": "shell1" },
+        { "title": "shell2" }
+      ]
     }
+  },
+  "workspaces": [
+    { "layout": "claude", "name": "canopy",             "dir": "~/tobeva/canopy" },
+    { "layout": "claude", "name": "kobold-core",        "dir": "~/kobold/kobold-core" },
+    { "layout": "claude", "name": "kobold-gis",         "dir": "~/kobold/kobold-gis" },
+    { "layout": "claude", "name": "machine-prospector",  "dir": "~/kobold/machine-prospector" },
+    { "layout": "claude", "name": "terrashed-ingest",    "dir": "~/kobold/terrashed-ingest" }
   ]
 }
