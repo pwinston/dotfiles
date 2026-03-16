@@ -81,3 +81,6 @@ admin() {
   local port=$(grep '^BACKLOT_PORT=' "$envfile" | cut -d= -f2)
   open "http://localhost:$port"
 }
+
+# KoBold
+alias aws-login="aws sso login; aws sts get-caller-identity"
