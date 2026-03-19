@@ -11,10 +11,12 @@
     }
   },
   "workspaces": [
-    { "layout": "claude", "name": "canopy",             "dir": "~/tobeva/canopy" },
-    { "layout": "claude", "name": "kobold-core",        "dir": "~/kobold/kobold-core" },
-    { "layout": "claude", "name": "kobold-gis",         "dir": "~/kobold/kobold-gis" },
+    { "layout": "claude", "name": "canopy",              "dir": "~/tobeva/canopy" },
+    { "layout": "claude", "name": "kobold-core",         "dir": "~/kobold/kobold-core" },
+    { "layout": "claude", "name": "kobold-gis",          "dir": "~/kobold/kobold-gis" },
     { "layout": "claude", "name": "machine-prospector",  "dir": "~/kobold/machine-prospector" },
-    { "layout": "claude", "name": "terrashed-ingest",    "dir": "~/kobold/terrashed-ingest" }
+    { "layout": "claude", "name": "terrashed-ingest",    "dir": "~/kobold/terrashed-ingest" },
+    { "layout": "claude", "name": "kobold-scratch-lfs",  "dir": "~/kobold/kobold-scratch-lfs" },
+     { "layout": "claude", "name": "dotfiles",           "dir": "~/dotfiles" }
   ]
 }
