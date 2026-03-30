@@ -14,7 +14,7 @@ alias ll='ls -la'
 alias la='ls -A'
 alias gs='git status'
 
-alias sz='source ~/.zshrc'
+alias sz='source ~/.zprofile && source ~/.zshrc'
 alias ez='code ~/dotfiles/zsh/zshrc'
 
 c() {
