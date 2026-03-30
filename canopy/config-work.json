@@ -1,22 +1,67 @@
 {
-  "mainWorkspace": "~/tobeva/canopy",
+  "mainWorkspace": "~/kobold",
   "terminal": "wezterm",
   "layouts": {
     "claude": {
       "tabs": [
-        { "title": "claude", "exec": "claude" },
-        { "title": "shell1" },
-        { "title": "shell2" }
+        {
+          "title": "claude",
+          "exec": "claude"
+        },
+        {
+          "title": "shell1"
+        },
+        {
+          "title": "shell2"
+        }
       ]
     }
   },
   "workspaces": [
-    { "layout": "claude", "name": "canopy",              "dir": "~/tobeva/canopy" },
-    { "layout": "claude", "name": "kobold-core",         "dir": "~/kobold/kobold-core" },
-    { "layout": "claude", "name": "kobold-gis",          "dir": "~/kobold/kobold-gis" },
-    { "layout": "claude", "name": "machine-prospector",  "dir": "~/kobold/machine-prospector" },
-    { "layout": "claude", "name": "terrashed-ingest",    "dir": "~/kobold/terrashed-ingest" },
-    { "layout": "claude", "name": "kobold-scratch-lfs",  "dir": "~/kobold/kobold-scratch-lfs" },
-     { "layout": "claude", "name": "dotfiles",           "dir": "~/dotfiles" }
+    {
+      "layout": "claude",
+      "name": "kbold",
+      "dir": "~/kobold"
+    },
+    {
+      "layout": "claude",
+      "name": "kobold-core",
+      "dir": "~/kobold/kobold-core"
+    },
+    {
+      "layout": "claude",
+      "name": "kobold-gis",
+      "dir": "~/kobold/kobold-gis"
+    },
+    {
+      "layout": "claude",
+      "name": "machine-prospector",
+      "dir": "~/kobold/machine-prospector"
+    },
+    {
+      "layout": "claude",
+      "name": "terrashed-ingest",
+      "dir": "~/kobold/terrashed-ingest"
+    },
+    {
+      "layout": "claude",
+      "name": "kobold-scratch-lfs",
+      "dir": "~/kobold/kobold-scratch-lfs"
+    },
+    {
+      "layout": "claude",
+      "name": "dotfiles",
+      "dir": "~/dotfiles"
+    },
+    {
+      "layout": "claude",
+      "name": "canopy",
+      "dir": "~/tobeva/canopy"
+    },
+    {
+      "name": "data-platform-2",
+      "dir": "~/kobold/data-platform-2",
+      "layout": "simple"
+    }
   ]
 }
