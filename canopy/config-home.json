@@ -1,35 +1,95 @@
 {
   "mainWorkspace": "~/tobeva/canopy",
-  "terminal": "wezterm",
+  "terminal": "cmux",
   "layouts": {
     "simple": {
       "tabs": [
-        { "title": "shell1" },
-        { "title": "shell2" }
+        {
+          "title": "shell1"
+        },
+        {
+          "title": "shell2"
+        }
       ]
     },
     "claude": {
       "tabs": [
-        { "title": "claude", "exec": "claude" },
-        { "title": "shell1" },
-        { "title": "shell2" }
+        {
+          "title": "claude",
+          "exec": "claude"
+        },
+        {
+          "title": "shell1"
+        },
+        {
+          "title": "shell2"
+        }
       ]
     },
     "orson": {
       "tabs": [
-        { "title": "claude", "exec": "claude" },
-        { "title": "serve", "exec": "make serve" },
-        { "title": "backlot", "exec": "make serve", "cwd": "backlot" },
-        { "title": "shell1" },
-        { "title": "shell2" }
+        {
+          "title": "claude",
+          "exec": "claude"
+        },
+        {
+          "title": "serve",
+          "exec": "make serve"
+        },
+        {
+          "title": "backlot",
+          "exec": "make serve",
+          "cwd": "backlot"
+        },
+        {
+          "title": "shell1"
+        },
+        {
+          "title": "shell2"
+        }
       ]
     }
   },
   "workspaces": [
-    { "layout": "simple", "name": "tobeva",  "dir": "~/tobeva" },
-    { "layout": "orson",  "name": "orson",  "dir": "~/tobeva/orson" },
-    { "layout": "claude", "name": "canopy",  "dir": "~/tobeva/canopy" },
-    { "layout": "claude", "name": "interlink",  "dir": "~/tobeva/interlink" },
-    { "layout": "claude", "name": "dotfiles",  "dir": "~/dotfiles" }
+    {
+      "layout": "simple",
+      "name": "tobeva",
+      "dir": "~/tobeva"
+    },
+    {
+      "layout": "orson",
+      "name": "orson",
+      "dir": "~/tobeva/orson"
+    },
+    {
+      "layout": "claude",
+      "name": "canopy",
+      "dir": "~/tobeva/canopy"
+    },
+    {
+      "layout": "claude",
+      "name": "interlink",
+      "dir": "~/tobeva/interlink"
+    },
+    {
+      "layout": "claude",
+      "name": "dotfiles",
+      "dir": "~/dotfiles"
+    },
+    {
+      "layout": "claude",
+      "name": "metastable",
+      "dir": "~/tobeva/metastable.org"
+    },
+    {
+      "layout": "claude",
+      "name": "tobeva.com",
+      "dir": "~/tobeva/tobeva.com"
+    },
+    {
+      "name": "metastable.org",
+      "dir": "~/tobeva/metastable.org",
+      "layout": "simple"
+    }
   ]
 }
