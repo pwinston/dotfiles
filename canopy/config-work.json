@@ -1,6 +1,6 @@
 {
   "mainWorkspace": "~/kobold",
-  "terminal": "wezterm",
+  "terminal": "cmux",
   "layouts": {
     "claude": {
       "tabs": [
