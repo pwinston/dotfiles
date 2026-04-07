@@ -2,7 +2,14 @@
 add_newline = false
 
 # Order of prompt segments
-format = "$directory$git_branch$git_status$python$pyenv$cmd_duration$character"
+format = "$custom$directory$git_branch$git_status$python$pyenv$cmd_duration$character"
+
+# --- MACHINE NAME ---
+[custom.machine]
+command = "scutil --get ComputerName"
+when = true
+style = "green bold"
+format = "[$output]($style) "
 
 # --- PATH ---
 [directory]
