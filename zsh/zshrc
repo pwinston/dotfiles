@@ -84,4 +84,3 @@ admin() {
 
 # KoBold
 alias aws-login="aws sso login; aws sts get-caller-identity"
-alias ssh-jh="ssh -A kobold@jh-philip-winston-default-production"
