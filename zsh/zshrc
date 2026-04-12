@@ -82,5 +82,8 @@ admin() {
   open "http://localhost:$port"
 }
 
+# SSH agent
+ssh-add -l &>/dev/null || ssh-add --apple-use-keychain 2>/dev/null
+
 # KoBold
 alias aws-login="aws sso login; aws sts get-caller-identity"
