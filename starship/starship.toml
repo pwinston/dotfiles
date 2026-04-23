@@ -5,8 +5,10 @@ add_newline = false
 format = "$custom$directory$git_branch$git_status$python$pyenv$cmd_duration$character"
 
 # --- MACHINE NAME ---
+# Map known long/MDM-assigned ComputerNames to short aliases.
+# Add more cases as needed for other machines.
 [custom.machine]
-command = "scutil --get ComputerName"
+command = 'n=$(scutil --get ComputerName); case "$n" in *3kh7*) echo pbw26;; *) echo "$n";; esac'
 when = true
 style = "green bold"
 format = "[$output]($style) "
