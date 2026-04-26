@@ -77,3 +77,11 @@ else
   python3 -m venv "$target/.venv"
   "$target/.venv/bin/pip" install -e "$target[dev]"
 fi
+
+# Install npm dependencies in each subproject that has a package.json.
+for npm_dir in "$target" "$target/web" "$target/backlot"; do
+  if [ -f "$npm_dir/package.json" ]; then
+    echo "orson setup: npm install in $npm_dir"
+    (cd "$npm_dir" && npm install)
+  fi
+done
