@@ -50,6 +50,22 @@ for file in wezterm.lua projects-home.lua projects-work.lua; do
   fi
 done
 
+# wt: symlink bin/wt (single file) and ~/.config/wt (whole dir of hooks)
+mkdir -p "$HOME/bin"
+if [ -L "$HOME/bin/wt" ] || [ -f "$HOME/bin/wt" ]; then
+  echo "SKIP ~/bin/wt (already exists)"
+else
+  ln -s "$DOTFILES/bin/wt" "$HOME/bin/wt"
+  echo "LINK ~/bin/wt"
+fi
+
+if [ -L "$HOME/.config/wt" ] || [ -e "$HOME/.config/wt" ]; then
+  echo "SKIP ~/.config/wt (already exists)"
+else
+  ln -s "$DOTFILES/wt" "$HOME/.config/wt"
+  echo "LINK ~/.config/wt"
+fi
+
 echo ""
 echo "Done! You may also need to install:"
 echo "  brew install starship pyenv direnv node@22"

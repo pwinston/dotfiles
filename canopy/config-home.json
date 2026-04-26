@@ -1,6 +1,13 @@
 {
   "mainWorkspace": "~/tobeva/canopy",
   "terminal": "cmux",
+  "cmux": {
+    "hooks": {
+      "statusPill": false,
+      "eventLog": false,
+      "skillEvents": false
+    }
+  },
   "layouts": {
     "simple": {
       "tabs": [

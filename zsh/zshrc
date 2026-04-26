@@ -82,6 +82,19 @@ admin() {
   open "http://localhost:$port"
 }
 
+# Open $PWD in VS Code Web, served locally, in a new cmux browser split.
+codew() {
+  local port=8000
+  local url="http://127.0.0.1:$port/?folder=$(pwd)"
+  if ! lsof -i ":$port" -sTCP:LISTEN >/dev/null 2>&1; then
+    code serve-web --without-connection-token --host 127.0.0.1 --port "$port" \
+      --extensions-dir "$HOME/.vscode/extensions" \
+      >/tmp/codew-$port.log 2>&1 &
+    sleep 1
+  fi
+  cmux new-pane --type browser --direction right --url "$url"
+}
+
 # SSH agent
 ssh-add -l &>/dev/null || ssh-add --apple-use-keychain 2>/dev/null
 
